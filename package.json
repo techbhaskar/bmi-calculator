@@ -25,13 +25,12 @@
 		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
 		"report-coverage": "cat ./coverage/lcov.info | codecov",
 		"cypress": "cypress open",
-		"test:ci": "npm run test  --watchAll=false --ci --coverage --coverageReporters='html'"
+		"test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage --coverageReporters='html'"
 	},
 	"jest": {
 		"collectCoverageFrom": [
 			"src/**/*.{js,jsx}"
 		],
-		"collectCoverage": true,
 		"coverageReporters": [
 			"lcov",
 			"text",
