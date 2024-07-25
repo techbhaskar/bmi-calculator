@@ -28,8 +28,8 @@ jobs:
 
             - name: Copy Coverage Report to Publish Directory
               run:
-                  cp ./coverage/lcov-report/index.html
-                  ./public/coverage-report-$(date +'%Y-%m-%d_%H-%M-%S').html
+                  cp ./coverage/index.html ./public/coverage-report-$(date
+                  +'%Y-%m-%d_%H-%M-%S').html
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3

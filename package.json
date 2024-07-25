@@ -18,8 +18,8 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"coverage": "jest --coverage",
 		"eject": "react-scripts eject",
+		"coverage": "jest --coverage",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
 		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
@@ -31,7 +31,6 @@
 		"collectCoverageFrom": [
 			"src/**/*.{js,jsx}"
 		],
-		"coverageDirectory": "coverage",
 		"coverageReporters": [
 			"lcov",
 			"text",
