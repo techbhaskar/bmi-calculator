@@ -25,7 +25,7 @@
 		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
 		"report-coverage": "cat ./coverage/lcov.info | codecov",
 		"cypress": "cypress open",
-		"test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage --coverageReporters='html'"
+		"test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage --coverageReporters='html' && mv coverage/lcov-report/index.html public/$(date +'%Y-%m-%d_%H-%M-%S').html"
 	},
 	"jest": {
 		"collectCoverageFrom": [
