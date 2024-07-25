@@ -26,7 +26,7 @@ jobs:
             - name: Generate Test Report
               run: npm run test:ci
 
-            - name: Copy Coverage Report to Publish Directory
+            - name: Copy Coverage Report to Publish Directory AAA
               run:
                   cp ./coverage/index.html ./public/coverage-report-$(date
                   +'%Y-%m-%d_%H-%M-%S').html
