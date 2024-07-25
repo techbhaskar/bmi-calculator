@@ -28,7 +28,7 @@ jobs:
 
             - name: Copy Coverage Report to Publish Directory
               run:
-                  cp coverage/lcov-report/index.html
+                  cp ./coverage/lcov-report/index.html
                   ./public/coverage-report-$(date +'%Y-%m-%d_%H-%M-%S').html
 
             - name: Deploy to GitHub Pages
