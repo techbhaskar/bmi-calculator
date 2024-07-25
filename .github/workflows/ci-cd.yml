@@ -26,10 +26,10 @@ jobs:
             - name: Generate Test Report
               run: npm run test:ci
 
-            - name: Copy Coverage Report to Publish Directory AAA
+            - name: Copy Coverage Report to Publish Directory
               run:
                   cp ./coverage/index.html ./public/coverage-report-$(date
-                  +'%Y-%m-%d_%H-%M-%S').html
+                  +'%Y-%m-%d_%H-%M-%S_%s').html
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
