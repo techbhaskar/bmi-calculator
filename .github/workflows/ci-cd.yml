@@ -27,9 +27,7 @@ jobs:
               run: npm run test:ci
 
             - name: Copy Coverage Report to Publish Directory
-              run:
-                  mv ./coverage/index.html
-                  /home/runner/work/bmi-calculator/bmi-calculator/index.html
+              run: mv ./coverage/index.html ./public/index.html
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
